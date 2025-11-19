@@ -1,16 +1,16 @@
-🧠 Mindful Focus
+⏸️ Pause-Distraction
 
 Reclaim Your Attention, One Quote at a Time.
 
 "Distraction is the thief of dreams."
 
-Mindful Focus isn't just a site blocker; it's a gentle nudge back to reality. Designed for students, developers, and anyone fighting the scroll-hole, this Chrome Extension silently tracks your time on distracting sites and intervenes with wisdom when you've had enough.
+Pause-Distraction isn't just a site blocker; it's a gentle nudge back to reality. Designed for students, developers, and anyone fighting the scroll-hole, this Chrome Extension silently tracks your time on distracting sites and intervenes with wisdom when you've had enough.
 
-✨ Why Mindful Focus?
+✨ Why Pause-Distraction?
 
-We all do it. You open Twitter for "5 minutes" and suddenly it's an hour later. Mindful Focus solves this without being draconian.
+We all do it. You open Twitter for "5 minutes" and suddenly it's an hour later. Pause-Distraction solves this by enforcing the limits you set.
 
-🕊️ Gentle Interventions: Instead of locking you out instantly, we serve you a notification with a motivational quote.
+🛑 Strict & Friendly Blocking: When your time is up, we don't just notify you—we redirect you to a calming "Time's Up" page with a motivational quote.
 
 🌗 Midnight Mode: A stunning, deep-dark UI that respects your eyes.
 
@@ -28,9 +28,9 @@ Description
 
 Automatically counts seconds spent on specific domains (YouTube, Reddit, etc.).
 
-🔔 Wisdom Alerts
+🚫 Strict Redirect
 
-Triggers a system notification with a random quote when your limit is hit.
+Redirects the tab to a blocked page immediately when the limit is exceeded.
 
 🎛️ Total Control
 
@@ -46,7 +46,7 @@ Since this is a custom-built extension, you get to feel like a hacker installing
 
 Step 1: The Setup
 
-Download the source code or ensure you have these files in a folder named FocusExtension:
+Download the source code or ensure you have these files in a folder named PauseDistraction:
 
 manifest.json
 
@@ -55,6 +55,8 @@ background.js
 popup.html & popup.css
 
 popup.js
+
+blocked.html (The page you see when time is up)
 
 icon.png (Optional, but looks nice!)
 
@@ -66,13 +68,14 @@ Toggle Developer Mode 🔛 (Top right corner switch).
 
 Click the Load unpacked button (Top left).
 
-Select your FocusExtension folder.
+Select your PauseDistraction folder.
 
-🎉 Success! You should now see the Mindful Focus icon in your toolbar.
+🎉 Success! You should now see the Pause-Distraction icon in your toolbar.
 
 🎮 Usage
 
 1. The Dashboard
+![alt text](image.png)
 
 Click the extension icon to open the popup.
 
@@ -95,34 +98,32 @@ facebook.com
 instagram.com
 
 To Add a Site:
-Type the domain (e.g., netflix.com) in the input box and hit +.
+Type the domain (e.g., netflix.com) in the input box and hit +. The extension automatically cleans URL inputs to find the correct domain.
 
 To Remove a Site:
 Click the small × next to the site name in the list.
+![alt text](<Screenshot 2025-11-19 162747.png>)
 
 📂 Under the Hood
 
 For the tech-savvy, here is how the magic happens:
 
-FocusExtension/
+PauseDistraction/
 ├── 📄 manifest.json   # The Blueprint (Permissions & Config)
 ├── 🧠 background.js   # The Brain (Time tracking logic & Alarms)
 ├── 🎨 popup.css       # The Look (Dark theme variables)
 ├── 🖥️ popup.html      # The Face (Structure of the popup)
-└── ⚙️ popup.js        # The Muscle (Saves settings to Storage)
+├── ⚙️ popup.js        # The Muscle (Saves settings to Storage)
+└── 🚫 blocked.html    # The Enforcer (Redirect destination)
 
 
 Core Tech:
 
 Manifest V3: Future-proof Chrome architecture.
 
-Chrome Storage API: Persisting data across browser restarts.
-
-Chrome Alarms API: Efficient polling without blocking the main thread.
-
 🔮 Roadmap
 
-[ ] Strict Mode: Force close tabs when time is up.
+[x] Strict Mode: Force redirect tabs when time is up.
 
 [ ] History Graphs: Visualize your progress over a week.
 
