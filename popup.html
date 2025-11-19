@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h2>Pause-Distraction</h2>
+
+  <div class="stat-box">
+    <label>Today's Distractions</label>
+    <div id="statsContainer">
+      <!-- Stats injected here -->
+      <div style="text-align: center; color: #999; font-size: 12px;">No data yet</div>
+    </div>
+  </div>
+
+  <div class="stat-box">
+    <label>Daily Limit (Minutes)</label>
+    <div style="display: flex; gap: 5px;">
+      <input type="number" id="limitInput" min="1" value="30">
+      <button id="saveLimit" style="width: auto;">Save</button>
+    </div>
+  </div>
+
+  <div class="stat-box">
+    <label>Manage Blocked Sites</label>
+    <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+      <input type="text" id="newSiteInput" placeholder="e.g. facebook.com">
+      <button id="addSite" style="width: auto;">+</button>
+    </div>
+    <ul id="siteList"></ul>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

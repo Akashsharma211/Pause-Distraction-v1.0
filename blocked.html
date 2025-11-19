@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time's Up!</title>
+    <style>
+        body {
+            background-color: #1e1e2e;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 { color: #f7768e; font-size: 4rem; margin: 0; }
+        p { font-size: 1.5rem; color: #7aa2f7; max-width: 600px; margin-top: 20px; line-height: 1.5; }
+        .icon { font-size: 6rem; margin-bottom: 20px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+    <div class="icon">⏳</div>
+    <h1>Time's Up!</h1>
+    <p id="quote">"Focus on being productive instead of busy."</p>
+    <script>
+        const quotes = [
+            "Lost time is never found again.",
+            "Focus on being productive instead of busy.",
+            "Your future is created by what you do today.",
+            "Distraction is the thief of dreams.",
+            "Step back. Breathe. Focus."
+        ];
+        document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
+</body>
+</html>

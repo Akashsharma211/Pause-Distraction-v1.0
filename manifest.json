@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Pause-Distraction",
+  "version": "1.0",
+  "description": "Tracks time on distracting sites and notifies you with quotes when limits are reached.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Focus Settings"
+  },
+  "icons": {
+    "16": "Blue Flat Illustrative Master Mind Technology AI Logo.png",
+    "48": "Blue Flat Illustrative Master Mind Technology AI Logo.png",
+    "128": "Blue Flat Illustrative Master Mind Technology AI Logo.png"
+  }
+}
